@@ -18,9 +18,6 @@ $message-transition-speed: 200ms;
        box-shadow: $message-box-shadow;
    }
 
-   #{$selector}:hover {
-   		box-shadow: $message-box-shadow-hover;
-   }
 }
 
 
@@ -36,4 +33,26 @@ $message-transition-speed: 200ms;
 .message .actions:hover {
    font-size: 80%;
    color: $primary-color;
+}
+
+.message > .names > .name {
+  color: lighten( #000, 33%);
+  font-weight: 700;
+}
+
+.message > .names > .nick {
+  font-size: 90%;
+  color: darken( #fff, 33% );
+  
+}
+.message > .names > .nick:before {
+  content: "@";
+  font-size: 90%;
+  color: darken( #fff, 33% );
+}
+
+.message > .time {
+  font-size: 80%;
+  color: darken( #fff, 33% );
+
 }
