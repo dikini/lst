@@ -1,0 +1,39 @@
+$message-border-style: solid;
+$message-border-width: 4px;
+$message-border-color: #fff;
+$message-box-shadow: 0 0 0 1px rgba(#000,.2);
+$message-box-shadow-hover: 0 0 6px 1px rgba($primary-color,0.5);
+
+// Radius and transition speed for thumbs
+
+$message-radius: $global-radius;
+$message-transition-speed: 200ms;
+
+
+
+
+@mixin lst-message($selector) {
+   #{$selector} {
+       border: $message-border-width $message-border-style $message-border-color;
+       box-shadow: $message-box-shadow;
+   }
+
+   #{$selector}:hover {
+   		box-shadow: $message-box-shadow-hover;
+   }
+}
+
+
+//////////////////////////////////////////////////////////////////////
+
+@include lst-message(".message.row");
+
+.message .actions {
+   font-size: 80%;
+   color: $primary-color;
+}
+
+.message .actions:hover {
+   font-size: 80%;
+   color: $primary-color;
+}
